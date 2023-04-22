@@ -36,7 +36,7 @@ export const handler: APIGatewayProxyHandler = async (
 
     const hasNoteLabel = eventData?.labels?.includes('note');
     if (!hasNoteLabel) {
-        return respondWithSuccess('success, no action taken');
+        return respondWithSuccess('note label not included, task ignored, no action taken');
     }
 
     switch (eventName) {
