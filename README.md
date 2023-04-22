@@ -1,6 +1,6 @@
 # Todoist ➡️ Notion Sync
 
-Recently, I created a serverless function for automatically syncing my Todoist tasks with my Notion Tasks database. It employs a unidirectional data flow (from Todoist to Notion) by listening to the Todoist Webhooks API for Todoist task-related events, and will create, update, or delete Notion tasks based on those events.
+Recently, I created a serverless function for automatically syncing my Todoist tasks with my Notion Tasks database. It employs a unidirectional data flow (from Todoist to Notion) by listening to the Todoist Webhooks API for Todoist task-related events, and will create, update, or delete Notion pages based on those events.
 
 This repo contains selected portions of that _private_ project that I have chosen to make public.
 
