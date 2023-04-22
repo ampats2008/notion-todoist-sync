@@ -6,7 +6,7 @@ This repo contains selected portions of that _private_ project that I have chose
 
 This project will not work properly on its own, but you may pick and choose elements to use for your own integration if you wish.
 
-Most of the work for this project went into creating TypeScript types to model the data received from the Todoist Webhooks API, as well as the types to model the data sent to the Notion API. You'll find these models in the `src/types` directory.
+Most of the work for this project went into creating TypeScript types to model the data received from the Todoist Webhooks API, as well as creating the types to model the data sent to the Notion API. You'll find these models in the `src/types` directory.
 
 ## Tech involved in this project
 
@@ -17,7 +17,7 @@ Most of the work for this project went into creating TypeScript types to model t
 
 ## How it works
 
-Any task which is created, updated, or deleted in Todoist will trigger a Todoist Webhooks API event. Each event sends a POST request to my AWS API Gateway, which invokes this serverless function (while passing along the data it received from Todoist).
+Any task which is created, updated, or deleted in Todoist will trigger a Todoist Webhooks API event. Each event sends a POST request to my AWS API Gateway, which invokes this serverless function (while passing along the data it received from Todoist). See `./src/handlers/todoist-tasks.ts` for the entry point of the program.
 
 If the Todoist task does not contain a `@note` label, then the task will be ignored. Otherwise, the Todoist task will be synced to my Notion Tasks Database.
 
